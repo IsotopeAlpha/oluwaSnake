@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-      <section id="home" className='flex flex-col  items-center w-[100vw] h-[50vh] bg-orange-300'>
+      <section id="home" className='flex flex-col p-5  items-center w-[100vw] h-[50vh] bg-orange-300'>
         <div></div>
         <div className="mt-[10vh] text-xl font-bold uppercase">Enter Tracking / Container Number</div>
         <div className="mt-5 flex gap-5">

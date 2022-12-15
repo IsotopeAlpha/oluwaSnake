@@ -16,7 +16,7 @@ export default function Navbar() {
         </ul>
     </div>
 
-    <div className='text-5xl absolute mt-[20vh] text-white uppercase font-bold'>Track Shipment</div>
+    <div className='text-5xl flex items-center absolute mt-[20vh] text-white uppercase font-bold'>Track Shipment</div>
     </div>
   )
 }

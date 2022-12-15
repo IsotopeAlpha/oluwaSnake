@@ -20,7 +20,7 @@ export default function Footer() {
                 <input placeholder="Email  example: felix45@hotmail.com"  className="border-gray-300 w-[40vw] h-[5vh] rounded p-3"/>
                 <button type="submit" className="p-2 bg-orange-700 text-white font-bold ">Email Me</button>
             </div>
-            <div className="mt-20 text-l">Copyright © 2022 Sky2C Freight Center. All rights reserved.</div>
+            <div className="mt-20 text-l p-2">Copyright © 2022 Sky2C Freight Center. All rights reserved.</div>
         </div>
         
       </div>
