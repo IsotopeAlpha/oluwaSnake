@@ -1,17 +1,20 @@
-import Footer from "./components/Footer.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./components/About.jsx";
+import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
-import Navbar from "./components/Navbar.jsx";
+import Services from "./components/Services.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <head>
-        <title>SKY2C Freight Center</title>
-      </head>
-      <Navbar />
-      <Home />
-      <Footer/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route element={<Home/>} path="/"/>
+      <Route element={<Services/>} path="/services"/>
+      <Route element={<About/>} path="/about"/>
+      <Route element={<Contact/>} path="/contact"/>
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 
