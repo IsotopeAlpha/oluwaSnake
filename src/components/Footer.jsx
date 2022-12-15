@@ -17,8 +17,8 @@ export default function Footer() {
             </div>
             <div className='mb-2 font-bold mt-10'>Newsletter</div>
             <div className="mt-5 flex sm:flex-row flex-col gap-5">
-                <input placeholder="Email  example: felix45@hotmail.com"  className="border-gray-300 w-[40vw] h-[5vh] rounded p-3"/>
-                <button type="submit" className="p-2 bg-orange-700 text-white font-bold ">Email Me</button>
+                <input placeholder="Email  example: felix45@hotmail.com"  className="border-gray-300 sm:w-[40vw] w-[80vw] h-[5vh] rounded p-3"/>
+                <button type="submit" className="p-2 bg-orange-700 text-white font-bold sm:w-[15vw] w-[80vw] ">Email Me</button>
             </div>
             <div className="mt-20 text-l p-2">Copyright © 2022 Sky2C Freight Center. All rights reserved.</div>
         </div>
