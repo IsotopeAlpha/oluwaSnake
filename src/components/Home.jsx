@@ -56,7 +56,11 @@ export default function Home() {
         <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
           <table className="w-[80vw] absolute text-white font-bold uppercase">
             <tr>
-              {data.status}
+              <td>Order Confirmed</td>
+              <td>Processing</td>
+              <td>Packaged</td>
+              <td>En Route</td>
+              <td>Ready For Delivery</td>
             </tr>
           </table>
           <div className='h-7 w-full bg-[#041030] mb-4'>
