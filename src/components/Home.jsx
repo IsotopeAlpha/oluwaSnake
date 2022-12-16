@@ -16,7 +16,7 @@ export default function Home() {
 
     if(code==""){
       Swal.fire("Tracking Code", "Tracking Code Required", "error");
-    }
+    }else{
 
     e.preventDefault();
     setLoading(true)
@@ -53,6 +53,7 @@ export default function Home() {
 
 
     setShowTrack(true);
+  }
 }
 
 
@@ -71,13 +72,7 @@ export default function Home() {
         {showTrack?
         <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
           <table className="sm:w-[80vw] absolute text-white font-bold sm:uppercase">
-            {/* <tr className="hidden sm:visible md:visible">
-              <td>Order Confirmed</td>
-              <td>Processing</td>
-              <td>Packaged</td>
-              <td>En Route</td>
-              <td>Ready For Delivery</td>
-            </tr> */}
+            
             <tr className=" uppercase">
               <td>{status}</td>
             </tr>
