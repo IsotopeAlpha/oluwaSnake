@@ -6,6 +6,7 @@ import Navbar from "./Navbar.jsx";
 export default function Home() {
   const [showTrack, setShowTrack]  = useState(false);
   const [code, setCode] = useState("");
+  const [status, setStatus] = useState("");
   const [data, setData]  = useState("");
   const [loading, setLoading] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(0);
@@ -17,6 +18,7 @@ export default function Home() {
       setData(res.data.data[0])
     });
 
+    setStatus(data.status);
     switch(data.status){
       case "processing":
         setProgressPercentage(40);
@@ -54,13 +56,16 @@ export default function Home() {
         </div>
         {showTrack?
         <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
-          <table className="w-[80vw] absolute text-white font-bold uppercase">
-            <tr>
+          <table className="sm:w-[80vw] absolute text-white font-bold sm:uppercase">
+            {/* <tr className="hidden sm:visible md:visible">
               <td>Order Confirmed</td>
               <td>Processing</td>
               <td>Packaged</td>
               <td>En Route</td>
               <td>Ready For Delivery</td>
+            </tr> */}
+            <tr className=" uppercase">
+              <td>{status}</td>
             </tr>
           </table>
           <div className='h-7 w-full bg-[#041030] mb-4'>
