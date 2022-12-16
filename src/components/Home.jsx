@@ -7,10 +7,13 @@ export default function Home() {
   const [showTrack, setShowTrack]  = useState(false);
   const [code, setCode] = useState("");
   const [data, setData]  = useState("");
+  const [loading, setLoading] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(0);
   
   const handleClick = async() =>{
+    setLoading(true)
     await axios.get(`https://sky2cfreight.onrender.com/user/${code}`).then((res)=>{
+      setLoading(false);  
       setData(res.data.data[0])
     });
     setShowTrack(true);
@@ -77,7 +80,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {data.item.map((item)=>(
+              {loading?<div>Loading</div>: data.item.map((item)=>(
                 <tr>
                   <td>{item.name}</td>
                   <td className="pl-10">{item.quantity}</td>
