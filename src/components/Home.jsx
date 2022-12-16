@@ -16,7 +16,6 @@ export default function Home() {
       setLoading(false);  
       setData(res.data.data[0])
     });
-    setShowTrack(true);
 
     switch(data.status){
       case "processing":
@@ -34,8 +33,10 @@ export default function Home() {
       default:
         setProgressPercentage(20);
         break;
-
     }
+
+
+    setShowTrack(true);
 }
 
 
