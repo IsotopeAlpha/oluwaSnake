@@ -28,8 +28,7 @@ export default function Home() {
         Swal.fire("Tracking Code", "Tracking Code Not Found", "error");
         setData("");
       }else{
-      console.log(res.data)
-      setData(res.data.data[0])
+      setData(res.data.data[0]);
       setStatus(data.status);}
     });
 
