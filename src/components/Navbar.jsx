@@ -17,7 +17,7 @@ export default function Navbar(props) {
         </ul>
     </div>
 
-    <div className='text-5xl font-mono shadow-lg  flex items-center absolute mt-[20vh] text-white uppercase font-bold'>{props.title}</div>
+    <div className='text-5xl font-mono shadow-lg bg-[#041030cc] p-5 pl-10 pr-10  flex items-center absolute mt-[20vh] text-white uppercase font-bold'>{props.title}</div>
     </div>
   )
 }

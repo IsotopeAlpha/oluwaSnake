@@ -9,7 +9,7 @@ export default function Home() {
   const handleClick =()=>{
     setShowTrack(true);
   }
-  const status = "En Route";
+  const progressPercentage = 20;
     return (
       <div>
 
@@ -23,11 +23,27 @@ export default function Home() {
             
         </div>
         {showTrack?
-        <div className="bg-white w-[80vw] p-4 m-4">
-          <table className="w-full ">
-            <tr className="mb-10 text-white">
-             
+        <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
+          <table className="w-[80vw] absolute text-white font-bold uppercase">
+            <tr>
+              <td>Order Confirmed</td>
+              <td>Processing</td>
+              <td>Packaged</td>
+              <td>En Route</td>
+              <td>Ready For Delivery</td>
             </tr>
+          </table>
+          <div className='h-7 w-full bg-[#041030] mb-4'>
+            <div
+                style={{ width: `${progressPercentage}%`}}
+                className={`h-full ${
+                  progressPercentage < 30 ?'bg-red-800':
+                  progressPercentage < 50 ?'bg-yellow-700':
+                    progressPercentage < 71 ? 'bg-yellow-300' : 'bg-green-600'}`}>
+            </div>
+          </div>
+          
+          <table className="w-full ">
             <tr className="bg-gray-300">
               <th className="mr-5">Item</th>
               <th>Quantity</th>

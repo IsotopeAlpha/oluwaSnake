@@ -9,7 +9,7 @@ import packaging from '../assets/packaging.jpg'
 
 export default function Services() {
     return (
-        <section >
+        <section>
         <Navbar  title="Our Services"/>
         <div className="font-bold sm:text-xl sm:pb-3 flex justify-center items-center uppercase  m-2 mt-[10vh]">
             At Sky2C Freight Center, We offer a variety of services ranging from warehousing to air freight.
@@ -33,9 +33,10 @@ export default function Services() {
                     </div>
             </div>
         </div>
-        <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 mb-10  justify-center items-center">
+        <div className="bg-[#041030] w-full h-1"></div>
+        <div className="sm:flex-row bg-orange-300  flex flex-col gap-5 p-2  justify-center items-center">
             <img src={ocean} alt="Value Image" className="sm:w-[40vw] sm:h-[30vw] w-[80vw] flex justify-center items-center rounded  sm:p-7"/>
-            <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">
+            <div className="text-[#041030] w-[80vw] sm:w-[50vw] mb-10 ">
                 <div className="font-bold sm:text-3xl sm:pb-3 uppercase">Ocean Freight</div>
                 <div className="sm:text-md p-2">
                     <p>By leveraging our strong and long-term carrier relationships, Sky2c Freight Center offers you flexible, reliable and secure ocean freight solutions. Customers value our expertise in international ocean freight forwarding across a global network that spans forty-six countries and regions. They value the ability to link with other services such as air freight forwarding, multimodal transport, cross-border services, or customs house brokerage.</p>
@@ -50,6 +51,7 @@ export default function Services() {
                 </div>
             </div>
         </div>
+        <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 mb-10  justify-center items-center">
             <img src={mission} alt="Value Image" className="sm:w-[40vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">
@@ -83,9 +85,10 @@ export default function Services() {
                 </div>
             </div>
         </div>
-        <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 mb-10  justify-center items-center">
+        <div className="bg-[#041030] w-full h-1"></div>
+        <div className="sm:flex-row  flex flex-col gap-5 p-2 bg-orange-300  justify-center items-center">
             <img src={air} alt="Value Image" className="sm:w-[40vw] sm:h-[30vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
-            <div className="text-[#041030] w-[80vw]  sm:w-[50vw] ">
+            <div className="text-[#041030] w-[80vw] mb-10 sm:w-[50vw] ">
                 <div className="font-bold sm:text-3xl sm:pb-3 uppercase">Air Freight</div>
                 <div className="sm:text-md p-2">
                     <p>International freight forwarding is often a balancing act between time, cost and environmental concerns. That’s one of the reasons companies choose Sky2c Freight Center for cost effective, smooth delivery of their cargo. Like them, you can be confident that our strategic alliances around the globe give you the flexibility to choose from a range of air and ocean freight service options. Seamlessly tailored to your precise needs, complete with end-to-end visibility.</p>
@@ -113,6 +116,7 @@ export default function Services() {
                 </div>
             </div>
         </div>
+        <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2  mb-10  justify-center items-center">
             <img src={packaging} alt="Value Image" className="sm:w-[40vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">
