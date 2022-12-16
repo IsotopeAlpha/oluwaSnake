@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 import Footer from "./Footer.jsx";
 import Navbar from "./Navbar.jsx";
 
@@ -7,18 +8,31 @@ export default function Home() {
   const [showTrack, setShowTrack]  = useState(false);
   const [code, setCode] = useState("");
   const [status, setStatus] = useState("");
-  const [data, setData]  = useState("");
+  const [data, setData]  = useState([]);
   const [loading, setLoading] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(0);
   
-  const handleClick = async() =>{
+  const handleClick = async(e) =>{
+
+    if(code==""){
+      Swal.fire("Tracking Code", "Tracking Code Required", "error");
+    }
+
+    e.preventDefault();
     setLoading(true)
     await axios.get(`https://sky2cfreight.onrender.com/user/${code}`).then((res)=>{
       setLoading(false);  
+
+      if(res.data.data<1){
+        Swal.fire("Tracking Code", "Tracking Code Not Found", "error");
+        
+      }else{
+      console.log(res.data)
       setData(res.data.data[0])
+      setStatus(data.status);}
     });
 
-    setStatus(data.status);
+    
     switch(data.status){
       case "processing":
         setProgressPercentage(40);
