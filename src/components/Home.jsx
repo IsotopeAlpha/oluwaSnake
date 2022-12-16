@@ -16,6 +16,7 @@ export default function Home() {
 
     if(code==""){
       Swal.fire("Tracking Code", "Tracking Code Required", "error");
+      setData("");
     }else{
 
     e.preventDefault();
@@ -25,7 +26,7 @@ export default function Home() {
 
       if(res.data.data<1){
         Swal.fire("Tracking Code", "Tracking Code Not Found", "error");
-        
+        setData("");
       }else{
       console.log(res.data)
       setData(res.data.data[0])
