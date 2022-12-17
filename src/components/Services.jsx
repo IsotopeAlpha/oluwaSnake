@@ -34,6 +34,9 @@ export default function Services() {
             </div>
         </div>
         <div className="bg-[#041030] w-full h-1"></div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
+     <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row bg-orange-300  flex flex-col gap-5 p-2  justify-center items-center">
             <img src={ocean} alt="Value Image" className="sm:w-[40vw] sm:h-[30vw] w-[80vw] flex justify-center items-center rounded  sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] mb-10 ">
@@ -52,6 +55,9 @@ export default function Services() {
             </div>
         </div>
         <div className="bg-[#041030] w-full h-1"></div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
+     <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 mb-10  justify-center items-center">
             <img src={mission} alt="Value Image" className="sm:w-[40vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">
@@ -86,6 +92,9 @@ export default function Services() {
             </div>
         </div>
         <div className="bg-[#041030] w-full h-1"></div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
+     <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 bg-orange-300  justify-center items-center">
             <img src={air} alt="Value Image" className="sm:w-[40vw] sm:h-[30vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] mb-10 sm:w-[50vw] ">
@@ -117,6 +126,9 @@ export default function Services() {
             </div>
         </div>
         <div className="bg-[#041030] w-full h-1"></div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
+     <div className="bg-[#041030] w-full h-1"></div>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2  mb-10  justify-center items-center">
             <img src={packaging} alt="Value Image" className="sm:w-[40vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">

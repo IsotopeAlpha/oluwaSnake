@@ -18,6 +18,8 @@ export default function About() {
                 <div className="sm:text-xl">We belive that asherence to our Core Values, as well as pride in our work and company, continuos improvement and responiveness, will lead us to continued growth.</div>
             </div>
         </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 justify-center items-center">
             <img src={vision} alt="Value Image" className="sm:w-[40vw] w-[80vw] flex justify-center items-center rounded  sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">
@@ -25,6 +27,8 @@ export default function About() {
                 <div className="sm:text-xl">Connecting people, process, business and commuinities to a better future through logistics and supply chain solutions.</div>
             </div>
         </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
         <div className="sm:flex-row  flex flex-col gap-5 p-2 m-2 justify-center items-center">
             <img src={mission} alt="Value Image" className="sm:w-[40vw] w-[80vw] rounded  flex justify-center items-center sm:p-7"/>
             <div className="text-[#041030] w-[80vw] sm:w-[50vw] ">

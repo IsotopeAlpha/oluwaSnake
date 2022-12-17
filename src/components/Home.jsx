@@ -105,6 +105,8 @@ export default function Home() {
           </table>
         </div>: <div className="mt-20 text-l">NB: Sometimes, it may take few minutes to load, please wait.</div>}
       </section>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3355231301514583"
+     crossorigin="anonymous"></script>
       <Footer/>
       </div>
     )
