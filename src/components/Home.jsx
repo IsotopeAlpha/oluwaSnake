@@ -61,7 +61,7 @@ export default function Home() {
       <div>
 
       <Navbar  title="Track Shipment"/>
-      <section className='flex flex-col p-10  items-center w-[100vw] bg-orange-300'>
+      <section className='flex flex-col p-10  items-center w-full bg-orange-300'>
         
         <div className="mt-[10vh] text-xl font-bold uppercase">Enter Tracking / Container Number</div>
         <div className="mt-5 flex sm:flex-row flex-col gap-5">
