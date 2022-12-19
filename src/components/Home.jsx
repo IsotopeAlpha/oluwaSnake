@@ -105,7 +105,7 @@ export default function Home() {
             <div className="ml-2">{loading?<div>Loading</div>: 10004623}</div>
           </div>
           
-          <div className="w-full flex mt-10">
+          <div className="w-full flex">
             <div>Tracking Code:</div>
             <div className="ml-2">{loading?<div>Loading</div>: data.code}</div>
           </div>
