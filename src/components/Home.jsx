@@ -3,11 +3,12 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import Footer from "./Footer.jsx";
 import Navbar from "./Navbar.jsx";
+import logo from "../assets/logo.png";
+import usa from "../assets/us.png";
 
 export default function Home() {
   const [showTrack, setShowTrack]  = useState(false);
   const [code, setCode] = useState("");
-  const [status, setStatus] = useState("");
   const [data, setData]  = useState([]);
   const [loading, setLoading] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(0);
@@ -29,7 +30,7 @@ export default function Home() {
         setData("");
       }else{
       setData(res.data.data[0]);
-      setStatus(data.status);}
+    }
     });
 
     
@@ -73,7 +74,7 @@ export default function Home() {
         <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
           <table className="sm:w-[80vw] absolute text-white font-bold sm:uppercase">
             <tr className="uppercase pl-4">
-              <td>{status}</td>
+              <td>{data.status}</td>
             </tr>
           </table>
           <div className='h-7 w-full bg-[#041030] mb-4'>
@@ -85,18 +86,53 @@ export default function Home() {
                     progressPercentage < 71 ? 'bg-yellow-300  animate-pulse' : 'bg-green-600  animate-pulse'}`}>
             </div> 
           </div>
+
+
+          
+          <div className="w-full flex gap-5 text-[#041030] justify-end">
+          <div className="text-lg font-bold">Sky2CFreight Center</div>
+            <img src={logo} alt="logo" className="w-[40px] h-[20px]"/>
+            <img src={usa} alt="logo" className="w-[30px] h-[20px]"/>
+          </div>
+          
+          <div className="w-full text-[#041030] flex justify-end">
+            <div>Address:</div>
+            <div className="ml-2">1210 S Pine Island Rd Suite 400, Plantain, FL 33324, USA</div>
+          </div>
+          
+          <div className="w-full flex mt-10">
+            <div>Order No.#:</div>
+            <div className="ml-2">{loading?<div>Loading</div>: 10004623}</div>
+          </div>
+          
+          <div className="w-full flex">
+            <div>Order Status:</div>
+            <div className="ml-2">{loading?<div>Loading</div>: data.status}</div>
+          </div>
+
+          <div className="w-full flex">
+            <div>Date:</div>
+            <div className="ml-2">{loading?<div>Loading</div>: data.date}</div>
+          </div>
+          <div className="mt-4 mb-2 font-bold">
+            Buyers Information:
+          </div>
           <div className="w-full ">
             <div className="w-full flex">
               <div className="font-bold">Name:</div>
-              <div className="ml-8">{data.name}</div>
+              <div className="ml-8">{loading?<div>Loading</div>: data.name}</div>
             </div>
             <div className="w-full flex">
               <div className="font-bold">Phone:</div>
-              <div className="ml-7">{data.phone}</div>
+              <div className="ml-7">{loading?<div>Loading</div>: data.phone}</div>
             </div>
             <div className="w-full flex">
-              <div className="font-bold">Location:</div>
-              <div className="ml-2">{data.location}</div>
+              <div className="font-bold">Country:</div>
+              <div className="ml-2">{loading?<div>Loading</div>: data.country}</div>
+            </div>
+            <div className="w-full flex">
+              <div className="font-bold">Address:</div>
+              <div className="ml-2">{loading?<div>Loading</div>: data.location}</div>
             </div>
           </div>
           
@@ -114,10 +150,7 @@ export default function Home() {
                   <td className="border-gray-300 border-solid border-2 p-2">{item.quantity}</td>
                 </tr>
               ))}
-              <tr>
-                <td className="font-bold bg-gray-200 mt-4 p-2 text-xl">TOTAL</td>
-                <td className="font-bold flex justify-end bg-gray-200 p-2 mt-4">{data.total}</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>: <div className="mt-20 text-l">NB: Sometimes, it may take few minutes to load, please wait.</div>}
