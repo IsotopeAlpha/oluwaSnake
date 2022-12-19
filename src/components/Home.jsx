@@ -94,12 +94,7 @@ export default function Home() {
             <img src={logo} alt="logo" className="w-[40px] h-[20px]"/>
             <img src={usa} alt="logo" className="w-[30px] h-[20px]"/>
           </div>
-          
-          <div className="w-full text-[#041030] flex justify-end">
-            <div>Address:</div>
-            <div className="ml-2">1210 S Pine Island Rd Suite 400, Plantain, FL 33324, USA</div>
-          </div>
-          
+         
           <div className="w-full flex mt-10">
             <div>Order No.#:</div>
             <div className="ml-2">{loading?<div>Loading</div>: 10004623}</div>
