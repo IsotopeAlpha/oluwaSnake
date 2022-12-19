@@ -41,7 +41,7 @@ export default function Home() {
       case "packaged":
         setProgressPercentage(56);
         break;
-      case "en route":
+      case "in transit":
         setProgressPercentage(70);
         break;
       case "ready":
@@ -136,9 +136,7 @@ export default function Home() {
             </div>
             <div className="w-full flex">
               <div className="font-bold">Transit:</div>
-              <div className="ml-2">{loading?<div>Loading</div>: data.mylocation}</div>
-              <div className="pl-2 pr-2 font-bold">to</div>
-              <div >{loading?<div>Loading</div>: data.location}</div>
+              <div className="ml-2">{loading?<div>Loading</div>: <>{data.mylocation} <b>to</b> {data.location}</>}</div>
             </div>
             
           </div>
