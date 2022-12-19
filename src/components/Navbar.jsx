@@ -5,9 +5,9 @@ import logo from '../assets/logo.png'
 
 export default function Navbar(props) {
   return (
-    <div className='flex justify-center items-center w-full h-[40vh]'>
+    <div className='flex justify-center items-center w-[100vw] h-[40vh]'>
       <img src={home} alt="home image" className='w-full h-[50vh]' />
-    <div className='flex fixed top-0 w-[98vw] bg-[#041030aa]  sm:h-[80px] p-2'>
+    <div className='flex fixed top-0 w-[100vw] bg-[#041030aa]  sm:h-[80px]'>
       <div className='w-[30vw] p-2 sm:w-[15vw] '><img src={logo} alt='logo' /></div>
         <ul className='flex sm:gap-8 gap-2 sm:justify-end justify-center text-white w-full pr-4 items-center font-bold'>
             <li ><Link to='/'>Home</Link></li>

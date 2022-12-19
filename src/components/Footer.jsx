@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 
 export default function Footer() {
     return (
-      <div className='sm:flex sm:flex-row flex-col gap-3 p-5 w-full bg-[#041030] text-white'>
+      <div className='sm:flex sm:flex-row flex-col gap-3 p-5 w-[100vw] bg-[#041030] text-white'>
         <div className='sm:flex-col sm:flex sm:w-[40vw] '>
             <div className=' mt-2 '><img src={logo} alt='logo' /></div>
             <div className="mt-[10vh] md:text-xl ">Logistics industry experts and entusiasts that are passionate about progressive supply chain solutions worldwide</div>
