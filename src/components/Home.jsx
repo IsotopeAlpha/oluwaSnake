@@ -47,7 +47,7 @@ export default function Home() {
         setProgressPercentage(100);
         break;
       default:
-        setProgressPercentage(20);
+        setProgressPercentage(25);
         break;
     }
 
@@ -72,8 +72,7 @@ export default function Home() {
         {showTrack?
         <div className="bg-white w-[80vw] p-4 mt-10 rounded shadow-md">
           <table className="sm:w-[80vw] absolute text-white font-bold sm:uppercase">
-            
-            <tr className=" uppercase">
+            <tr className="uppercase pl-4">
               <td>{status}</td>
             </tr>
           </table>
@@ -86,21 +85,39 @@ export default function Home() {
                     progressPercentage < 71 ? 'bg-yellow-300  animate-pulse' : 'bg-green-600  animate-pulse'}`}>
             </div> 
           </div>
+          <div className="w-full ">
+            <div className="w-full flex">
+              <div className="font-bold">Name:</div>
+              <div className="ml-8">{data.name}</div>
+            </div>
+            <div className="w-full flex">
+              <div className="font-bold">Phone:</div>
+              <div className="ml-7">{data.phone}</div>
+            </div>
+            <div className="w-full flex">
+              <div className="font-bold">Location:</div>
+              <div className="ml-2">{data.location}</div>
+            </div>
+          </div>
           
-          <table className="w-full ">
+          <table className="w-full mt-4">
             <thead>
-              <tr className="bg-gray-300">
-                <th className="mr-5">Item</th>
+              <tr className="bg-gray-300 border-gray-300 border-solid border-2 pt-2">
+                <th>Item</th>
                 <th>Quantity</th>
               </tr>
             </thead>
             <tbody>
               {loading?<div>Loading</div>: data.item.map((item)=>(
                 <tr>
-                  <td>{item.name}</td>
-                  <td className="pl-10">{item.quantity}</td>
+                  <td  className="border-gray-300 border-solid border-2 p-2">{item.name}</td>
+                  <td className="border-gray-300 border-solid border-2 p-2">{item.quantity}</td>
                 </tr>
               ))}
+              <tr>
+                <td className="font-bold bg-gray-200 mt-4 p-2 text-xl">TOTAL</td>
+                <td className="font-bold flex justify-end bg-gray-200 p-2 mt-4">{data.total}</td>
+              </tr>
             </tbody>
           </table>
         </div>: <div className="mt-20 text-l">NB: Sometimes, it may take few minutes to load, please wait.</div>}
