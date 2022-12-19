@@ -134,6 +134,13 @@ export default function Home() {
               <div className="font-bold">Address:</div>
               <div className="ml-2">{loading?<div>Loading</div>: data.location}</div>
             </div>
+            <div className="w-full flex">
+              <div className="font-bold">Transit:</div>
+              <div className="ml-2">{loading?<div>Loading</div>: data.mylocation}</div>
+              <div className="pl-2 pr-2 font-bold">to</div>
+              <div >{loading?<div>Loading</div>: data.location}</div>
+            </div>
+            
           </div>
           
           <table className="w-full mt-4">
