@@ -5,9 +5,7 @@ import logo from '../assets/logo.png'
 
 export default function Footer() {
     const [loading, setLoading] = useState(false);
-    const [email, setEmail] = useState("");
     const handleEmail=()=>{
-        e.preventDefault();
         setLoading(true);
         Swal.fire("Thank You", "You'll be notified", "success");
         setLoading(false);
@@ -28,7 +26,7 @@ export default function Footer() {
             </div>
             <div className='mb-2 font-bold mt-10'>Newsletter</div>
             <div className="mt-5 flex sm:flex-row flex-col gap-5">
-                <input placeholder="Email  example: felix45@hotmail.com" onChange={(e)=>setEmail(e.target.value)} className="border-gray-300 sm:w-[40vw] text-black w-[80vw] h-[5vh] rounded p-3"/>
+                <input placeholder="Email  example: felix45@hotmail.com" className="border-gray-300 sm:w-[40vw] text-black w-[80vw] h-[5vh] rounded p-3"/>
                 <button disabled={loading} onClick={handleEmail} className="p-2 bg-orange-700 text-white font-bold sm:w-[15vw] w-[80vw] ">{loading?"Loading":"Email Me"}</button>
             </div>
             <div className="mt-20 text-l p-2">Copyright © 2022 Sky2C Freight Center. All rights reserved.</div>
