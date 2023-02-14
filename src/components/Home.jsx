@@ -22,14 +22,15 @@ export default function Home() {
 
     e.preventDefault();
     setLoading(true)
-    await axios.get(`https://sky2cfreight.onrender.com/user/${code}`).then((res)=>{
-      setLoading(false);  
+    await axios.get(`https://sky2cfreight.onrender.com/user/${code}`).then((res)=>{  
 
       if(res.data.data<1){
         Swal.fire("Tracking Code", "Tracking Code Not Found", "error");
         setData("");
+        setLoading(false);
       }else{
       setData(res.data.data[0]);
+      setLoading(false);
     }
     });
 
@@ -67,7 +68,7 @@ export default function Home() {
         <div className="mt-[10vh] text-xl font-bold uppercase">Enter Tracking / Container Number</div>
         <div className="mt-5 flex sm:flex-row flex-col gap-5">
             <input placeholder="Tracking Number #"  className="border-gray-300 w-[70vw] h-[5vh] rounded p-3" onChange={(e)=>setCode(e.target.value)}/>
-            <button type="submit" onClick={handleClick} className="p-2 bg-orange-700 text-white font-bold">Track & Trace</button>
+            <button type="submit" onClick={handleClick} disabled={loading} className="p-2 bg-orange-700 text-white font-bold">{loading?"Loading":"Track & Trace"}</button>
             
         </div>
         {showTrack?
