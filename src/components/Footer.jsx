@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import logo from '../assets/logo.png'
 
 export default function Footer() {
-    [laoding, setLoading] = useState(false);
+    const [laoding, setLoading] = useState(false);
     const handleEmail=()=>{
         setLoading(true);
         Swal.fire("Thank You", "You'll be notified", "success");
