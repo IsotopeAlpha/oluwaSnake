@@ -136,8 +136,8 @@ export default function Home() {
               <div className="ml-2">{loading?<div>Loading</div>: data.location}</div>
             </div>
             <div className="w-full flex">
-              <div className="font-bold">Transit:</div>
-              <div className="ml-2">{loading?<div>Loading</div>: <>{data.mylocation} <b>to</b> {data.location}</>}</div>
+              <div className="font-bold">Transit to:</div>
+              <div className="ml-2">{loading?<div>Loading</div>: <>{data.location}</>}</div>
             </div>
             
           </div>
